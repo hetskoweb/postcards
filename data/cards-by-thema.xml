@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><GroupedCards>
+    <Thema name="ARCHITECTURE" count="2">
+        <OldCard id="card-1">
+            <Type sent="true">GREETING</Type>
+            <Country>Ukraine</Country>
+            <Year>1912</Year>
+            <Authors>
+                <Author>Ivan Trush</Author>
+            </Authors>
+            <Valuable>HISTORICAL</Valuable>
+        </OldCard>
+        <OldCard id="card-4">
+            <Type sent="false">ORDINARY</Type>
+            <Country>Poland</Country>
+            <Year>1927</Year>
+            <Valuable>HISTORICAL</Valuable>
+        </OldCard>
+    </Thema>
+    <Thema name="CITY_LANDSCAPE" count="1">
+        <OldCard id="card-2">
+            <Type sent="false">ORDINARY</Type>
+            <Country>Austria</Country>
+            <Year>1898</Year>
+            <Valuable>COLLECTIBLE</Valuable>
+        </OldCard>
+    </Thema>
+    <Thema name="NATURE" count="2">
+        <OldCard id="card-3">
+            <Type sent="true">ADVERTISING</Type>
+            <Country>Germany</Country>
+            <Year>1935</Year>
+            <Authors>
+                <Author>Hans Müller</Author>
+                <Author>Karl Weiss</Author>
+            </Authors>
+            <Valuable>THEMATIC</Valuable>
+        </OldCard>
+        <OldCard id="card-7">
+            <Type sent="false">GREETING</Type>
+            <Country>Czech Republic</Country>
+            <Year>1960</Year>
+            <Valuable>THEMATIC</Valuable>
+        </OldCard>
+    </Thema>
+    <Thema name="PEOPLE" count="1">
+        <OldCard id="card-8">
+            <Type sent="true">ADVERTISING</Type>
+            <Country>Poland</Country>
+            <Year>1840</Year>
+            <Authors>
+                <Author>Jan Matejko</Author>
+            </Authors>
+            <Valuable>HISTORICAL</Valuable>
+        </OldCard>
+    </Thema>
+    <Thema name="RELIGION" count="1">
+        <OldCard id="card-6">
+            <Type sent="true">ORDINARY</Type>
+            <Country>Ukraine</Country>
+            <Year>1905</Year>
+            <Valuable>HISTORICAL</Valuable>
+        </OldCard>
+    </Thema>
+    <Thema name="SPORT" count="1">
+        <OldCard id="card-5">
+            <Type sent="true">GREETING</Type>
+            <Country>France</Country>
+            <Year>1924</Year>
+            <Authors>
+                <Author>Jean Dupont</Author>
+            </Authors>
+            <Valuable>COLLECTIBLE</Valuable>
+        </OldCard>
+    </Thema>
+</GroupedCards>
