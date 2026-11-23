@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:simpleType name="ThemaType">
+        <xs:annotation><xs:documentation>Тема зображення.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CITY_LANDSCAPE"/>
+            <xs:enumeration value="NATURE"/>
+            <xs:enumeration value="PEOPLE"/>
+            <xs:enumeration value="RELIGION"/>
+            <xs:enumeration value="SPORT"/>
+            <xs:enumeration value="ARCHITECTURE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CardKindType">
+        <xs:annotation><xs:documentation>Тип листівки.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GREETING"/>
+            <xs:enumeration value="ADVERTISING"/>
+            <xs:enumeration value="ORDINARY"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ValuableType">
+        <xs:annotation><xs:documentation>Вид цінності листівки.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="HISTORICAL"/>
+            <xs:enumeration value="COLLECTIBLE"/>
+            <xs:enumeration value="THEMATIC"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="YearType">
+        <xs:annotation><xs:documentation>Рік видання: старі листівки, 1840-1980.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1840"/>
+            <xs:maxInclusive value="1980"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CountryType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="60"/>
+            <xs:pattern value="[\p{L}][\p{L} .'\-]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AuthorNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+            <xs:maxLength value="80"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CardIdType">
+        <xs:annotation><xs:documentation>Унікальний ідентифікатор листівки (тип ID), формат card-N.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="card-[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="KindElementType">
+        <xs:annotation><xs:documentation>Тип листівки + обов'язковий атрибут "чи була відправлена".</xs:documentation></xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="CardKindType">
+                <xs:attribute name="sent" type="xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AuthorsType">
+        <xs:sequence>
+            <xs:element name="Author" type="AuthorNameType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OldCardType">
+        <xs:sequence>
+            <xs:element name="Thema" type="ThemaType"/>
+            <xs:element name="Type" type="KindElementType"/>
+            <xs:element name="Country" type="CountryType"/>
+            <xs:element name="Year" type="YearType"/>
+            <xs:element name="Authors" type="AuthorsType" minOccurs="0"/>
+            <xs:element name="Valuable" type="ValuableType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="CardIdType" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="OldCards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="OldCard" type="OldCardType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

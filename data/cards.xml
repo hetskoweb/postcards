@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OldCards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="cards.xsd">
+    <OldCard id="card-1">
+        <Thema>ARCHITECTURE</Thema>
+        <Type sent="true">GREETING</Type>
+        <Country>Ukraine</Country>
+        <Year>1912</Year>
+        <Authors>
+            <Author>Ivan Trush</Author>
+        </Authors>
+        <Valuable>HISTORICAL</Valuable>
+    </OldCard>
+    <OldCard id="card-2">
+        <Thema>CITY_LANDSCAPE</Thema>
+        <Type sent="false">ORDINARY</Type>
+        <Country>Austria</Country>
+        <Year>1898</Year>
+        <Valuable>COLLECTIBLE</Valuable>
+    </OldCard>
+    <OldCard id="card-3">
+        <Thema>NATURE</Thema>
+        <Type sent="true">ADVERTISING</Type>
+        <Country>Germany</Country>
+        <Year>1935</Year>
+        <Authors>
+            <Author>Hans Müller</Author>
+            <Author>Karl Weiss</Author>
+        </Authors>
+        <Valuable>THEMATIC</Valuable>
+    </OldCard>
+    <OldCard id="card-4">
+        <Thema>ARCHITECTURE</Thema>
+        <Type sent="false">ORDINARY</Type>
+        <Country>Poland</Country>
+        <Year>1927</Year>
+        <Valuable>HISTORICAL</Valuable>
+    </OldCard>
+    <OldCard id="card-5">
+        <Thema>SPORT</Thema>
+        <Type sent="true">GREETING</Type>
+        <Country>France</Country>
+        <Year>1924</Year>
+        <Authors>
+            <Author>Jean Dupont</Author>
+        </Authors>
+        <Valuable>COLLECTIBLE</Valuable>
+    </OldCard>
+    <OldCard id="card-6">
+        <Thema>RELIGION</Thema>
+        <Type sent="true">ORDINARY</Type>
+        <Country>Ukraine</Country>
+        <Year>1905</Year>
+        <Valuable>HISTORICAL</Valuable>
+    </OldCard>
+    <OldCard id="card-7">
+        <Thema>NATURE</Thema>
+        <Type sent="false">GREETING</Type>
+        <Country>Czech Republic</Country>
+        <Year>1960</Year>
+        <Valuable>THEMATIC</Valuable>
+    </OldCard>
+    <OldCard id="card-8">
+        <Thema>PEOPLE</Thema>
+        <Type sent="true">ADVERTISING</Type>
+        <Country>Poland</Country>
+        <Year>1840</Year>
+        <Authors>
+            <Author>Jan Matejko</Author>
+        </Authors>
+        <Valuable>HISTORICAL</Valuable>
+    </OldCard>
+</OldCards>
